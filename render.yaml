@@ -1,0 +1,9 @@
+services:
+  # A Docker web service
+  - type: web
+    name: streamlit-gex
+    runtime: python
+    plan: free
+    autoDeploy: false
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run app.py
